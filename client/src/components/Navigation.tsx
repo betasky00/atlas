@@ -25,8 +25,12 @@ export default function Navigation() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <a className="text-2xl font-serif font-bold text-foreground hover:text-accent transition-colors">
-            ATLAS
+          <a className="flex items-center hover:opacity-80 transition-opacity">
+            <img 
+              src="/logo.png" 
+              alt="Atlas" 
+              className="h-12 w-auto object-contain"
+            />
           </a>
         </Link>
 
