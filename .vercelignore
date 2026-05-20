@@ -1,0 +1,12 @@
+node_modules
+.git
+.gitignore
+README.md
+.env.local
+.env.*.local
+dist
+server
+shared
+patches
+*.log
+.DS_Store
