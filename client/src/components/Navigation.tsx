@@ -29,7 +29,8 @@ export default function Navigation() {
             <img 
               src="/logo.png" 
               alt="Atlas" 
-              className="h-12 w-auto object-contain"
+              className="h-8 w-auto object-contain object-left"
+              style={{ maxWidth: '200px' }}
             />
           </a>
         </Link>
