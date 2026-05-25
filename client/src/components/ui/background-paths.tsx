@@ -20,8 +20,9 @@ function FloatingPaths({ position }: { position: number }) {
         <div className="absolute inset-0 pointer-events-none">
             <svg
                 className="w-full h-full"
-                viewBox="0 0 696 1316"
+                viewBox="0 0 348 658"
                 fill="none"
+                preserveAspectRatio="xMidYMid slice"
             >
                 <title>Background Paths</title>
                 {paths.map((path) => (

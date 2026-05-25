@@ -31,7 +31,7 @@ export default function HomeDesktop() {
       </section>
 
       {/* Text Section - Below Animation */}
-      <section className="py-32 bg-background">
+      <section className="py-32 bg-white">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <h1 className="text-6xl font-serif font-bold text-foreground mb-8 leading-tight">
             Explorez la Culture, Découvrez le Monde

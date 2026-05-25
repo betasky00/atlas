@@ -28,7 +28,7 @@ export default function HomeMobile() {
       </section>
 
       {/* Text Section - Below Animation */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-2xl text-center">
           <h1 className="text-4xl font-serif font-bold text-foreground mb-6 leading-tight">
             Explorez la Culture, Découvrez le Monde
