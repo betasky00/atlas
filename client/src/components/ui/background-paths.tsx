@@ -2,44 +2,42 @@
 
 import { motion } from "framer-motion";
 
-function FloatingPaths({ position }: { position: number }) {
-    const paths = Array.from({ length: 36 }, (_, i) => ({
+function FloatingPaths() {
+    // Create horizontal flowing lines that move left to right
+    const paths = Array.from({ length: 20 }, (_, i) => ({
         id: i,
-        d: `M-${380 - i * 5 * position} -${189 + i * 6}C-${
-            380 - i * 5 * position
-        } -${189 + i * 6} -${312 - i * 5 * position} ${216 - i * 6} ${
-            152 - i * 5 * position
-        } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
-            684 - i * 5 * position
-        } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
-        color: `rgba(255, 167, 0, ${0.1 + i * 0.03})`,
-        width: 0.5 + i * 0.03,
+        // Horizontal curves flowing from left to right
+        d: `M 0 ${100 + i * 40} Q 250 ${80 + i * 40} 500 ${100 + i * 40} T 1000 ${100 + i * 40}`,
+        color: `rgba(255, 167, 0, ${0.1 + i * 0.02})`,
+        width: 0.5 + i * 0.05,
+        delay: i * 0.1,
     }));
 
     return (
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none w-full h-full">
             <svg
                 className="w-full h-full"
-                viewBox="200 300 600 600"
+                viewBox="0 0 1000 1000"
                 fill="none"
                 preserveAspectRatio="xMidYMid slice"
-            >   {paths.map((path) => (
+            >
+                {paths.map((path) => (
                     <motion.path
                         key={path.id}
                         d={path.d}
                         stroke="#FFA700"
                         strokeWidth={path.width}
-                        strokeOpacity={0.1 + path.id * 0.03}
-                        initial={{ pathLength: 0.3, opacity: 0.6 }}
+                        strokeOpacity={0.15 + path.id * 0.02}
+                        initial={{ pathOffset: 0, opacity: 0.3 }}
                         animate={{
-                            pathLength: 1,
-                            opacity: [0.3, 0.6, 0.3],
-                            pathOffset: [0, 1, 0],
+                            pathOffset: [0, 1],
+                            opacity: [0.2, 0.5, 0.2],
                         }}
                         transition={{
-                            duration: 20 + Math.random() * 10,
+                            duration: 15 + Math.random() * 10,
                             repeat: Number.POSITIVE_INFINITY,
                             ease: "linear",
+                            delay: path.delay,
                         }}
                     />
                 ))}
@@ -52,8 +50,7 @@ export function BackgroundPaths() {
     return (
         <div className="absolute inset-0 w-full h-full overflow-hidden bg-white pointer-events-none">
             <div className="absolute inset-0 w-full h-full">
-                <FloatingPaths position={1} />
-                <FloatingPaths position={-1} />
+                <FloatingPaths />
             </div>
         </div>
     );
