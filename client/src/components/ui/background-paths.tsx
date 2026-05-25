@@ -3,26 +3,25 @@
 import { motion } from "framer-motion";
 
 function FloatingPaths({ position }: { position: number }) {
-    const paths = Array.from({ length: 50 }, (_, i) => ({
+    const paths = Array.from({ length: 36 }, (_, i) => ({
         id: i,
-        d: `M-${500 - i * 8 * position} -${300 + i * 8}C-${
-            500 - i * 8 * position
-        } -${300 + i * 8} -${400 - i * 8 * position} ${300 - i * 8} ${
-            200 - i * 8 * position
-        } ${500 - i * 8}C${800 - i * 8 * position} ${700 - i * 8} ${
-            900 - i * 8 * position
-        } ${1200 - i * 8} ${900 - i * 8 * position} ${1200 - i * 8}`,
-        color: `rgba(255, 167, 0, ${0.08 + i * 0.02})`,
-        width: 0.7 + i * 0.04,
+        d: `M-${380 - i * 5 * position} -${189 + i * 6}C-${
+            380 - i * 5 * position
+        } -${189 + i * 6} -${312 - i * 5 * position} ${216 - i * 6} ${
+            152 - i * 5 * position
+        } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
+            684 - i * 5 * position
+        } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
+        color: `rgba(255, 167, 0, ${0.1 + i * 0.03})`,
+        width: 0.5 + i * 0.03,
     }));
 
     return (
         <div className="absolute inset-0 pointer-events-none">
             <svg
                 className="w-full h-full"
-                viewBox="0 0 1000 1500"
+                viewBox="0 0 696 316"
                 fill="none"
-                preserveAspectRatio="xMidYMid slice"
             >
                 <title>Background Paths</title>
                 {paths.map((path) => (
