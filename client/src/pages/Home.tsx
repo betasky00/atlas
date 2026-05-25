@@ -19,31 +19,36 @@ export default function Home() {
       <section className="relative py-20 md:py-32 bg-background overflow-hidden">
         <BackgroundPaths />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6 leading-tight">
-              Explorez la Culture, Découvrez le Monde
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Atlas est votre fenêtre sur la culture française et les actualités du monde. 
-              À travers nos podcasts, nos newsletters et nos contenus, nous vous offrons 
-              une perspective unique sur les enjeux culturels et mondiaux qui façonnent notre époque.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/podcasts">
-                <a>
-                  <Button className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90">
-                    Écouter nos Podcasts
-                    <ArrowRight className="ml-2" size={18} />
-                  </Button>
-                </a>
-              </Link>
-              <Link href="/newsletter">
-                <a>
-                  <Button variant="outline" className="w-full sm:w-auto border-border hover:bg-secondary">
-                    S'abonner à la Newsletter
-                  </Button>
-                </a>
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Empty left side for animation */}
+            <div className="hidden md:block"></div>
+            {/* Text on right side */}
+            <div className="max-w-2xl">
+              <h1 className="text-5xl md:text-6xl font-serif font-bold text-foreground mb-6 leading-tight">
+                Explorez la Culture, Découvrez le Monde
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                Atlas est votre fenêtre sur la culture française et les actualités du monde. 
+                À travers nos podcasts, nos newsletters et nos contenus, nous vous offrons 
+                une perspective unique sur les enjeux culturels et mondiaux qui façonnent notre époque.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/podcasts">
+                  <a>
+                    <Button className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90">
+                      Écouter nos Podcasts
+                      <ArrowRight className="ml-2" size={18} />
+                    </Button>
+                  </a>
+                </Link>
+                <Link href="/newsletter">
+                  <a>
+                    <Button variant="outline" className="w-full sm:w-auto border-border hover:bg-secondary">
+                      S'abonner à la Newsletter
+                    </Button>
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
