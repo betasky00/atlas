@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { BackgroundPaths } from '@/components/ui/background-paths';
 
 /**
  * Home Page - Atlas Media
@@ -14,9 +15,10 @@ import { ArrowRight } from 'lucide-react';
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-background">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background Animation */}
+      <section className="relative py-20 md:py-32 bg-background overflow-hidden">
+        <BackgroundPaths />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6 leading-tight">
               Explorez la Culture, Découvrez le Monde

@@ -48,50 +48,50 @@
 }
 
 :root {
-  /* Atlas Media - Premium Editorial Colors */
-  --primary: #1a1a1a;
+  /* Atlas Media - New Color Scheme */
+  --primary: #424242;
   --primary-foreground: #ffffff;
-  --accent: #d4a574;
-  --accent-foreground: #1a1a1a;
-  --sidebar-primary: #1a1a1a;
+  --accent: #FFA700;
+  --accent-foreground: #ffffff;
+  --sidebar-primary: #424242;
   --sidebar-primary-foreground: #ffffff;
-  --chart-1: #d4a574;
-  --chart-2: #8b7355;
-  --chart-3: #1a1a1a;
+  --chart-1: #FFA700;
+  --chart-2: #FF8C00;
+  --chart-3: #424242;
   --chart-4: #f5f5f5;
   --chart-5: #e8e8e8;
   --radius: 0.5rem;
   --background: #ffffff;
-  --foreground: #1a1a1a;
+  --foreground: #424242;
   --card: #f9f9f9;
-  --card-foreground: #1a1a1a;
+  --card-foreground: #424242;
   --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
+  --popover-foreground: #424242;
   --secondary: #f5f5f5;
-  --secondary-foreground: #1a1a1a;
+  --secondary-foreground: #424242;
   --muted: #e8e8e8;
   --muted-foreground: #666666;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #e8e8e8;
   --input: #f5f5f5;
-  --ring: #d4a574;
+  --ring: #FFA700;
   --sidebar: #ffffff;
-  --sidebar-foreground: #1a1a1a;
+  --sidebar-foreground: #424242;
   --sidebar-accent: #f5f5f5;
-  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-accent-foreground: #424242;
   --sidebar-border: #e8e8e8;
-  --sidebar-ring: #d4a574;
+  --sidebar-ring: #FFA700;
 }
 
 .dark {
   /* Atlas Media - Dark Mode */
   --primary: #ffffff;
-  --primary-foreground: #1a1a1a;
-  --accent: #d4a574;
-  --accent-foreground: #1a1a1a;
+  --primary-foreground: #424242;
+  --accent: #FFA700;
+  --accent-foreground: #ffffff;
   --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #1a1a1a;
+  --sidebar-primary-foreground: #424242;
   --background: #0f0f0f;
   --foreground: #ffffff;
   --card: #1a1a1a;
@@ -106,9 +106,9 @@
   --destructive-foreground: #0f0f0f;
   --border: #2a2a2a;
   --input: #1a1a1a;
-  --ring: #d4a574;
-  --chart-1: #d4a574;
-  --chart-2: #8b7355;
+  --ring: #FFA700;
+  --chart-1: #FFA700;
+  --chart-2: #FF8C00;
   --chart-3: #ffffff;
   --chart-4: #2a2a2a;
   --chart-5: #3a3a3a;
@@ -117,7 +117,7 @@
   --sidebar-accent: #2a2a2a;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #2a2a2a;
-  --sidebar-ring: #d4a574;
+  --sidebar-ring: #FFA700;
 }
 
 @layer base {
