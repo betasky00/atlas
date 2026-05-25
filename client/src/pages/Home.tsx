@@ -25,7 +25,7 @@ export default function Home() {
           <img 
             src="/logo-clean.webp" 
             alt="Atlas" 
-            className="h-40 md:h-52 w-auto object-contain drop-shadow-lg"
+            className="h-32 md:h-52 w-auto object-contain drop-shadow-lg px-4"
           />
         </div>
       </section>
