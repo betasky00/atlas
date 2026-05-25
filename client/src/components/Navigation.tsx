@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'wouter';
+import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 
 /**
@@ -12,6 +12,8 @@ import { Menu, X } from 'lucide-react';
  */
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [location] = useLocation();
+  const isHome = location === '/';
 
   const navItems = [
     { label: 'Accueil', href: '/' },
@@ -21,19 +23,22 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background border-b border-border">
+    <nav className="sticky top-0 z-50 bg-background">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/">
-          <a className="flex items-center hover:opacity-80 transition-opacity">
-            <img 
-              src="/logo.png" 
-              alt="Atlas" 
-              className="h-8 w-auto object-contain object-left"
-              style={{ maxWidth: '200px' }}
-            />
-          </a>
-        </Link>
+        {/* Logo - Only show on non-home pages */}
+        {!isHome && (
+          <Link href="/">
+            <a className="flex items-center hover:opacity-80 transition-opacity">
+              <img 
+                src="/logo.png" 
+                alt="Atlas" 
+                className="h-8 w-auto object-contain object-left"
+                style={{ maxWidth: '200px' }}
+              />
+            </a>
+          </Link>
+        )}
+        {isHome && <div className="flex-1"></div>}
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
